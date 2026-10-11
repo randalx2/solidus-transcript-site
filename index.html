@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Local-first legal evidence transcription, speaker review, and WhatsApp reconciliation for Windows.">
+  <title>Solidus Transcript — Evidence, ready to review</title>
+  <link rel="icon" href="assets/Solidus-STAMP.ico">
+  <style>
+    :root { color-scheme: dark; --ink:#171717; --paper:#f1efe9; --card:#211f1b; --muted:#b6b1a7; --brass:#c39a5b; --brass-dark:#8c642f; --line:#3a3731; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:var(--paper); font:16px/1.6 "Segoe UI",Arial,sans-serif; }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:700; letter-spacing:.03em; }
+    .brand img { width:48px; height:48px; object-fit:contain; }
+    .nav a:last-child { color:var(--muted); text-decoration:none; }
+    .hero { padding:90px 0 76px; display:grid; grid-template-columns:1.3fr .7fr; align-items:center; gap:52px; }
+    .eyebrow { color:var(--brass); font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { max-width:720px; margin:15px 0 18px; font-size:clamp(2.8rem,6vw,5.2rem); line-height:1.02; letter-spacing:-.045em; }
+    h2 { font-size:clamp(1.8rem,3vw,2.6rem); line-height:1.15; letter-spacing:-.025em; }
+    .lead { max-width:650px; color:#d8d4cc; font-size:1.16rem; }
+    .actions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .button { display:inline-flex; min-height:50px; align-items:center; justify-content:center; padding:0 20px; border-radius:6px; background:var(--brass); color:#171717; font-weight:700; text-decoration:none; transition:background .15s ease, transform .15s ease; }
+    .button:hover { background:#d2ae77; transform:translateY(-1px); }
+    .button.secondary { background:transparent; color:var(--paper); border:1px solid #625c50; }
+    .button.secondary:hover { background:#26231f; }
+    .button[aria-disabled="true"] { background:#34312b; color:#aaa49a; cursor:not-allowed; transform:none; }
+    .stamp-card { min-height:320px; display:grid; place-items:center; border:1px solid #484236; border-radius:12px; background:radial-gradient(ellipse at center,#29251e 0%,#1c1b18 70%); }
+    .stamp-card img { width:min(72%,260px); height:auto; filter:drop-shadow(0 18px 35px #0008); }
+    .proof { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .proof div { padding:24px; text-align:center; color:#dedad2; }
+    .proof div+div { border-left:1px solid var(--line); }
+    .proof strong { display:block; color:var(--brass); font-size:1.1rem; }
+    section { padding:72px 0; }
+    .intro { max-width:680px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px; }
+    .card { padding:24px; border:1px solid var(--line); border-radius:9px; background:var(--card); }
+    .card .num { color:var(--brass); font-weight:700; letter-spacing:.12em; }
+    .card h3 { margin:10px 0 7px; font-size:1.12rem; }
+    .card p { margin:0; color:var(--muted); }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:30px; }
+    .step { border-top:2px solid var(--brass-dark); padding-top:16px; }
+    .step strong { display:block; margin-bottom:6px; }
+    .step p { margin:0; color:var(--muted); }
+    .buy-panel { padding:34px; border:1px solid #62543d; border-radius:12px; background:linear-gradient(120deg,#28231b,#1d1c19 70%); display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .buy-panel h2 { margin:0 0 10px; }
+    .buy-panel p { max-width:680px; margin:0; color:#c8c2b7; }
+    .note { margin-top:20px; color:#969087; font-size:.9rem; }
+    footer { padding:28px 0 40px; border-top:1px solid var(--line); color:#99948a; font-size:.9rem; }
+    footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:62px 0 48px; gap:28px; } .stamp-card { min-height:230px; } .grid,.steps { grid-template-columns:1fr; } .proof { grid-template-columns:1fr; } .proof div+div { border-left:0; border-top:1px solid var(--line); } .buy-panel { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><img src="assets/Solidus-STAMP.ico" alt=""><span>SOLIDUS TRANSCRIPT</span></a>
+      <a href="#workflow">How it works</a>
+    </div>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Evidence workflow for Windows</div>
+        <h1>Evidence, ready to review.</h1>
+        <p class="lead">Turn recordings and WhatsApp exports into timestamped transcripts, reviewable speaker labels, and organised verification packages — on your own PC.</p>
+        <div class="actions">
+          <a id="buy-top" class="button" href="#buy" aria-disabled="true">Store opening soon</a>
+          <a class="button secondary" href="#features">Explore the workflow</a>
+        </div>
+      </div>
+      <div class="stamp-card"><img src="assets/Solidus-STAMP.ico" alt="Solidus Transcript STAMP emblem"></div>
+    </div>
+    <div class="wrap proof">
+      <div><strong>Local-first</strong>Case media stays on your computer</div>
+      <div><strong>Windows 10 / 11</strong>64-bit desktop installation</div>
+      <div><strong>One guided workflow</strong>From source media to review</div>
+    </div>
+    <section id="features">
+      <div class="wrap">
+        <div class="eyebrow">Built for the evidence workflow</div>
+        <h2>From source files to a reviewable record.</h2>
+        <p class="intro">Solidus Transcript brings transcription, speaker review, and WhatsApp chronology together in one desktop application. Machine-generated speaker labels remain editable and should always be checked against the original recording.</p>
+        <div class="grid">
+          <article class="card"><div class="num">01</div><h3>Transcribe recordings</h3><p>Create timestamped transcripts from supported audio and video files, with speaker labelling when needed.</p></article>
+          <article class="card"><div class="num">02</div><h3>Reconcile WhatsApp exports</h3><p>Match voice notes and attachments to chat chronology, reuse completed work, and process missing media.</p></article>
+          <article class="card"><div class="num">03</div><h3>Review and verify</h3><p>Correct words and speakers, play source media from transcript timestamps, and create portable outputs.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="workflow" style="background:#1d1c19;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div class="wrap">
+        <div class="eyebrow">Simple to get started</div>
+        <h2>Purchase, activate, process.</h2>
+        <div class="steps">
+          <div class="step"><strong>1. Buy online</strong><p>Complete checkout using the secure Solidus store. There is no separate Solidus account to create.</p></div>
+          <div class="step"><strong>2. Install and activate</strong><p>Download the Windows installer from your receipt, install it, and enter the emailed license key once.</p></div>
+          <div class="step"><strong>3. Work locally</strong><p>Choose a recording or WhatsApp export and review the generated transcript against the source media.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="buy">
+      <div class="wrap">
+        <div class="buy-panel">
+          <div><div class="eyebrow">Solidus Transcript for Windows</div><h2>Start with a clean evidence workflow.</h2><p>License options, current pricing, and the installer are provided through the secure checkout and order receipt.</p></div>
+          <a id="buy-bottom" class="button" href="#buy" aria-disabled="true">Store opening soon</a>
+        </div>
+        <p class="note">Solidus Transcript assists with evidence preparation. Review all transcripts, speaker labels, chronology, and exports against the original source material.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© Solidus Software Solutions (Pty) Ltd</span><span>Local-first evidence processing · Windows x64</span></div></footer>
+  <script src="checkout-config.js"></script>
+  <script>
+    (() => {
+      const url = window.SOLIDUS_CHECKOUT_URL;
+      if (!url || !/^https:\/\//i.test(url)) return;
+      for (const id of ["buy-top", "buy-bottom"]) {
+        const button = document.getElementById(id);
+        button.href = url;
+        button.textContent = "Buy a license";
+        button.removeAttribute("aria-disabled");
+      }
+    })();
+  </script>
+</body>
+</html>
