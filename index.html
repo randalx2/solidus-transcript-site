@@ -29,7 +29,6 @@
     .button:hover { background:#d2ae77; transform:translateY(-1px); }
     .button.secondary { background:transparent; color:var(--paper); border:1px solid #625c50; }
     .button.secondary:hover { background:#26231f; }
-    .button[aria-disabled="true"] { background:#34312b; color:#aaa49a; cursor:not-allowed; transform:none; }
     .stamp-card { min-height:320px; display:grid; place-items:center; border:1px solid #484236; border-radius:12px; background:radial-gradient(ellipse at center,#29251e 0%,#1c1b18 70%); }
     .stamp-card img { width:min(72%,260px); height:auto; filter:drop-shadow(0 18px 35px #0008); }
     .proof { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -51,9 +50,12 @@
     .buy-panel h2 { margin:0 0 10px; }
     .buy-panel p { max-width:680px; margin:0; color:#c8c2b7; }
     .note { margin-top:20px; color:#969087; font-size:.9rem; }
+    .requirements { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:24px; }
+    .requirements div { padding:18px; border:1px solid var(--line); border-radius:8px; color:var(--muted); }
+    .requirements strong { display:block; color:var(--paper); }
     footer { padding:28px 0 40px; border-top:1px solid var(--line); color:#99948a; font-size:.9rem; }
     footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:62px 0 48px; gap:28px; } .stamp-card { min-height:230px; } .grid,.steps { grid-template-columns:1fr; } .proof { grid-template-columns:1fr; } .proof div+div { border-left:0; border-top:1px solid var(--line); } .buy-panel { align-items:flex-start; flex-direction:column; } }
+    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:62px 0 48px; gap:28px; } .stamp-card { min-height:230px; } .grid,.steps,.requirements { grid-template-columns:1fr; } .proof { grid-template-columns:1fr; } .proof div+div { border-left:0; border-top:1px solid var(--line); } .buy-panel { align-items:flex-start; flex-direction:column; } }
   </style>
 </head>
 <body>
@@ -68,9 +70,10 @@
       <div>
         <div class="eyebrow">Evidence workflow for Windows</div>
         <h1>Evidence, ready to review.</h1>
-        <p class="lead">Turn recordings and WhatsApp exports into timestamped transcripts, reviewable speaker labels, and organised verification packages — on your own PC.</p>
+        <p class="lead">Turn recordings and WhatsApp exports into timestamped transcripts, reviewable speaker labels, and organised verification packages on your own PC.</p>
+        <p class="intro">Built for legal-support teams, investigators, labour consultants and compliance professionals who need a practical, reviewable record without sending their source media to a transcription cloud.</p>
         <div class="actions">
-          <a id="buy-top" class="button" href="#buy" aria-disabled="true">Store opening soon</a>
+          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20I%27d%20like%20to%20request%20early%20access%20to%20Solidus%20Transcript.">Request an early-access pilot</a>
           <a class="button secondary" href="#features">Explore the workflow</a>
         </div>
       </div>
@@ -79,7 +82,7 @@
     <div class="wrap proof">
       <div><strong>Local-first</strong>Case media stays on your computer</div>
       <div><strong>Windows 10 / 11</strong>64-bit desktop installation</div>
-      <div><strong>One guided workflow</strong>From source media to review</div>
+      <div><strong>Human review</strong>Speaker labels and transcripts remain reviewable</div>
     </div>
     <section id="features">
       <div class="wrap">
@@ -95,38 +98,37 @@
     </section>
     <section id="workflow" style="background:#1d1c19;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
       <div class="wrap">
-        <div class="eyebrow">Simple to get started</div>
-        <h2>Purchase, activate, process.</h2>
+        <div class="eyebrow">A focused first release</div>
+        <h2>Start with the job you need done.</h2>
         <div class="steps">
-          <div class="step"><strong>1. Buy online</strong><p>Complete checkout using the secure Solidus store. There is no separate Solidus account to create.</p></div>
-          <div class="step"><strong>2. Install and activate</strong><p>Download the Windows installer from your receipt, install it, and enter the emailed license key once.</p></div>
-          <div class="step"><strong>3. Work locally</strong><p>Choose a recording or WhatsApp export and review the generated transcript against the source media.</p></div>
+          <div class="step"><strong>1. See a supervised demo</strong><p>We walk through a representative workflow using sample or appropriately de-identified media.</p></div>
+          <div class="step"><strong>2. Validate your workflow</strong><p>Confirm Windows compatibility, typical file types, review steps and output requirements before purchase.</p></div>
+          <div class="step"><strong>3. Activate a paid licence</strong><p>The planned annual licence uses a secure hosted checkout and a licence key. Checkout opens when the store is approved and the commercial installer is cleared.</p></div>
         </div>
+      </div>
+    </section>
+    <section id="requirements">
+      <div class="wrap">
+        <div class="eyebrow">Before the demo</div>
+        <h2>Check the practical requirements.</h2>
+        <div class="requirements">
+          <div><strong>Windows</strong>Windows 10 22H2 or Windows 11, 64-bit.</div>
+          <div><strong>Memory</strong>16 GB RAM minimum practical target; 32 GB recommended for larger jobs.</div>
+          <div><strong>Storage</strong>Allow at least 10 GB free before installation, plus space for source files and results.</div>
+        </div>
+        <p class="note">A dedicated GPU is not required. Processing speed varies by CPU, recording duration and selected workflow. All transcripts and speaker labels should be reviewed against the source media.</p>
       </div>
     </section>
     <section id="buy">
       <div class="wrap">
         <div class="buy-panel">
-          <div><div class="eyebrow">Solidus Transcript for Windows</div><h2>Start with a clean evidence workflow.</h2><p>License options, current pricing, and the installer are provided through the secure checkout and order receipt.</p></div>
-          <a id="buy-bottom" class="button" href="#buy" aria-disabled="true">Store opening soon</a>
+          <div><div class="eyebrow">Proposed launch offer</div><h2>Solidus Transcript Professional</h2><p><strong>US$99 per year</strong> is the initial price hypothesis for one user on one Windows PC, including updates while the subscription is active. The price is being validated with early users; live checkout and customer downloads remain pending provider approval and completion of release checks.</p></div>
+          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20please%20contact%20me%20about%20Solidus%20Transcript%20early%20access.">Discuss early access</a>
         </div>
-        <p class="note">Solidus Transcript assists with evidence preparation. Review all transcripts, speaker labels, chronology, and exports against the original source material.</p>
+        <p class="note">Early access is a supervised pilot request, not an instant trial download. The production installer will only be distributed after third-party model/software rights and clean-machine release tests are cleared. Solidus Transcript assists with evidence preparation; it does not make legal findings or guarantee transcription or speaker-identification accuracy.</p>
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><span>© Solidus Software Solutions (Pty) Ltd</span><span>Local-first evidence processing · Windows x64</span></div></footer>
-  <script src="checkout-config.js"></script>
-  <script>
-    (() => {
-      const url = window.SOLIDUS_CHECKOUT_URL;
-      if (!url || !/^https:\/\//i.test(url)) return;
-      for (const id of ["buy-top", "buy-bottom"]) {
-        const button = document.getElementById(id);
-        button.href = url;
-        button.textContent = "Buy a license";
-        button.removeAttribute("aria-disabled");
-      }
-    })();
-  </script>
+  <footer><div class="wrap"><span>© Solidus Software Solutions (Pty) Ltd</span><span><a href="mailto:legal.compliance.solidus@gmail.com">Email Solidus</a> · Local-first evidence processing · Windows x64</span></div></footer>
 </body>
 </html>
