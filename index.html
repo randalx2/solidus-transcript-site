@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171717">
-  <meta name="description" content="Local-first legal evidence transcription, speaker review, and WhatsApp reconciliation for Windows.">
+  <meta name="description" content="Solidus Transcript transforms recordings into timestamp-linked, editable, locally reviewable audio evidence packages. Services by quotation; software licensing enquiries welcome.">
   <title>Solidus Transcript — Evidence, ready to review</title>
   <link rel="icon" href="assets/Solidus-STAMP.ico">
   <style>
@@ -56,6 +56,20 @@
     footer { padding:28px 0 40px; border-top:1px solid var(--line); color:#99948a; font-size:.9rem; }
     footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
     @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:62px 0 48px; gap:28px; } .stamp-card { min-height:230px; } .grid,.steps,.requirements { grid-template-columns:1fr; } .proof { grid-template-columns:1fr; } .proof div+div { border-left:0; border-top:1px solid var(--line); } .buy-panel { align-items:flex-start; flex-direction:column; } }
+
+    .feature-showcase{border-top:1px solid var(--line);background:#1c1a18}
+    .comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 12px}
+    .comparison-side{border-radius:12px;border:1px solid var(--line);padding:26px;background:#25221e}
+    .comparison-side.solidus{border-color:#927243;background:linear-gradient(145deg,#30271d,#211e1a)}
+    .compare-label{color:var(--brass);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
+    .conventional p{margin:0 0 10px;font-family:Georgia,serif;color:#d6d0c8}
+    .small{font-size:.9rem;color:#bbb2a7!important;line-height:1.5;margin-top:18px!important}
+    .transcript-line{display:grid;grid-template-columns:60px 1fr 20px;gap:9px;align-items:center;border-bottom:1px solid #574a3b;padding:13px 0;font-size:.94rem}
+    .timecode{color:#e4b970;font-weight:700;font-variant-numeric:tabular-nums}
+    .play-icon{color:var(--brass)}
+    .licensing-panel{margin-top:18px;padding:26px 32px;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .licensing-panel p{max-width:740px;color:#c8c2b7}
+    @media(max-width:760px){.comparison{grid-template-columns:1fr}.licensing-panel{flex-direction:column;align-items:flex-start}}
   </style>
 </head>
 <body>
@@ -69,11 +83,11 @@
     <div class="wrap hero">
       <div>
         <div class="eyebrow">Evidence workflow for Windows</div>
-        <h1>Evidence, ready to review.</h1>
-        <p class="lead">Turn recordings and WhatsApp exports into timestamped transcripts, reviewable speaker labels, and organised verification packages on your own PC.</p>
-        <p class="intro">Built for legal-support teams, investigators, labour consultants and compliance professionals who need a practical, reviewable record without sending their source media to a transcription cloud.</p>
+        <h1>Hear it. Check it. Present it.</h1>
+        <p class="lead">More than speech-to-text: replay the source at a timestamp, correct words and speaker labels, and deliver an offline interactive HTML evidence viewer or a suitable PDF package.</p>
+        <p class="intro">Built for dispute-resolution practitioners, legal support, board meetings and investigations. The software is being prepared for premium commercial licensing; managed services are available by individual quotation.</p>
         <div class="actions">
-          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20I%27d%20like%20to%20request%20early%20access%20to%20Solidus%20Transcript.">Request an early-access pilot</a>
+          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20I%27d%20like%20to%20request%20early%20access%20to%20Solidus%20Transcript.">Enquire about a paid project</a>
           <a class="button secondary" href="services.html">View paid services</a>
         </div>
       </div>
@@ -84,6 +98,22 @@
       <div><strong>Windows 10 / 11</strong>64-bit desktop installation</div>
       <div><strong>Human review</strong>Speaker labels and transcripts remain reviewable</div>
     </div>
+    <section id="interactive-review" class="feature-showcase">
+      <div class="wrap">
+        <div class="eyebrow">Interactive verification advantage</div>
+        <h2>A transcript that takes you back to its source.</h2>
+        <p class="intro">A static document tells you what was written. A reviewed Solidus package can help you locate the corresponding recording, listen to it, correct text and speaker attribution, and present the evidence in a portable format.</p>
+        <div class="comparison" role="group" aria-label="Comparison of static transcript and interactive evidence review">
+          <div class="comparison-side conventional"><div class="compare-label">Basic static transcript</div><p>Speaker 1: We agreed to meet at nine.</p><p>Speaker 2: I remember that.</p><p class="small">To double-check a phrase, you must manually search the recording.</p></div>
+          <div class="comparison-side solidus"><div class="compare-label">Solidus review workflow</div>
+            <div class="transcript-line"><span class="timecode">00:18</span><span><strong>Speaker A</strong> &nbsp; We agreed to meet at nine.</span><span class="play-icon" aria-hidden="true">▶</span></div>
+            <div class="transcript-line"><span class="timecode">00:24</span><span><strong>Speaker B</strong> &nbsp; I remember that.</span><span class="play-icon" aria-hidden="true">▶</span></div>
+            <p class="small">Timestamp-linked playback • reviewer corrections • speaker review • offline HTML • PDF preparation</p>
+          </div>
+        </div>
+        <p class="note">Illustrative feature comparison, not a live demo or screenshot. Playback and export capabilities depend on the workflow, compatible source media and viewer. A client should always verify machine-generated content against original recordings.</p>
+      </div>
+    </section>
     <section id="features">
       <div class="wrap">
         <div class="eyebrow">Built for the evidence workflow</div>
@@ -91,8 +121,8 @@
         <p class="intro">Solidus Transcript brings transcription, speaker review, and WhatsApp chronology together in one desktop application. Machine-generated speaker labels remain editable and should always be checked against the original recording.</p>
         <div class="grid">
           <article class="card"><div class="num">01</div><h3>Transcribe recordings</h3><p>Create timestamped transcripts from supported audio and video files, with speaker labelling when needed.</p></article>
-          <article class="card"><div class="num">02</div><h3>Reconcile WhatsApp exports</h3><p>Match voice notes and attachments to chat chronology, reuse completed work, and process missing media.</p></article>
-          <article class="card"><div class="num">03</div><h3>Review and verify</h3><p>Correct words and speakers, play source media from transcript timestamps, and create portable outputs.</p></article>
+          <article class="card"><div class="num">02</div><h3>Reconcile WhatsApp audio</h3><p>Match voice notes and attachments to chat chronology, reuse completed work, and process missing media.</p></article>
+          <article class="card"><div class="num">03</div><h3>Review and verify</h3><p>Review and correct text or speaker labels, navigate to source-media timestamps, and prepare offline HTML or PDF outputs where supported.</p></article>
         </div>
       </div>
     </section>
@@ -122,10 +152,11 @@
     <section id="buy">
       <div class="wrap">
         <div class="buy-panel">
-          <div><div class="eyebrow">Available now by arrangement</div><h2>Solidus Evidence Workflow Pilot</h2><p><strong>Introductory pilot fee: R950.</strong> Includes one WhatsApp export with up to 10 voice notes, or one audio recording up to 60 minutes; timestamped draft transcript; TXT/DOCX outputs; and one correction pass for timestamped errors reported within five business days. Scope and feasibility are confirmed before payment or processing.</p></div>
-          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20I%27d%20like%20to%20book%20the%20R950%20Evidence%20Workflow%20Pilot.%20Please%20confirm%20scope%2C%20delivery%20and%20payment.">Request the R950 pilot</a>
+          <div><div class="eyebrow">Professional evidence services</div><h2>Every recording has a different story.</h2><p>Request a tailored quotation for reviewed transcription, recorded meetings, offline HTML audio-linked review, PDF evidence packs, and WhatsApp chronology. Fees depend on recording length, speaker count, overlap, audio quality, language, verification effort and deadline. A short 1–2 minute demonstration may be arranged where suitable.</p></div>
+          <a class="button" href="https://wa.me/27785337783?text=Hello%20Solidus%2C%20I%27d%20like%20a%20tailored%20quote%20for%20transcription%20or%20record%20preparation.">Request a direct quote</a>
         </div>
-        <p class="note">The pilot is a service, not an instant software download. Payment is arranged by invoice/direct payment after scope is confirmed. Do not send confidential case material before agreeing handling and retention terms. Output is machine-generated draft evidence support, not certified/verbatim transcription, legal advice, forensic authentication or a finding about speaker identity. The planned US$99/year self-serve software licence and downloadable installer remain pending commercial release clearance.</p>
+        <div class="licensing-panel"><div><div class="eyebrow">Premium software, in development</div><h2>Interested in using Solidus inside your organisation?</h2><p>Ask about pilot access, locally installed software licensing and future enterprise deployment. Commercial release is still subject to model redistribution permissions, installer testing and payment/licensing activation. Software ownership or bespoke rights would require a separate negotiated agreement.</p></div><a class="button secondary" href="mailto:legal.compliance.solidus@gmail.com?subject=Solidus%20Transcript%20Enterprise%20Licensing%20Enquiry">Enquire about licensing</a></div>
+        <p class="note">Services are provided on an agreed written scope and quotation, not at a fixed website price. No certification, guaranteed speaker identification, court admissibility or legal advice is implied. Original recordings, consent and confidentiality arrangements must be reviewed before processing.</p>
       </div>
     </section>
   </main>
